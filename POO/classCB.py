@@ -1,3 +1,4 @@
+# super classe/ classe pai/mãe
 class ContaBancaria:
     def __init__(self):
         self._nBanco = 0 

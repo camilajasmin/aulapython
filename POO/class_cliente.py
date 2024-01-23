@@ -8,12 +8,16 @@ class Cliente:
         self.__telefone = ""
 
     def gravarCliente(self, nome="", email="", cpf="", idade=0, telefone=""):
-        if (nome == "" 
-            or email== "" 
-            or cpf== "" 
-            or idade < 16 
-            or telefone== ""):
-            print("DIGITE TODOS OS DADOS CORRETAMENTE")
+        if (nome=="" 
+            or email=="" 
+            or cpf=="" 
+            or idade < 18 
+            or telefone == "" 
+            or not cpf.isnumeric() 
+            or len(cpf) != 11
+            or len(telefone) != 9
+            or email.find("@") ):
+            print("DIGITE TODOS OS CAMPOS CORRETAMENTE!")
         else:
             
             self.__nome = nome
